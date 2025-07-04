@@ -64,6 +64,7 @@ LEFT JOIN economies e ON e.country = c.country --- LEFT JOIN je zbytečný, zem�
 WHERE c.continent = 'Europe' --- je relevantní srvonávat v rámci Evropy
 ORDER BY e.country;
 
+---
 
 --- 1) Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají? Z tabulky 1 je patrné, že v některých letech mzdy v určitých odvětvích klesaly. Tabulka 2 nám pak dává přehlednější souhrnná data, včetně let, kdy došlo k největšímu růstu a největšímu poklesu. Existují odvětví, u kterých mzdy nikdy meziročně nepoklesly, např. zdravotní a sociální péče, zpracovatelský průmysl. Činnosti v oblasti nemovitostí např. rekordně poklesly v prvním covidovém roce, většina ostatních odvětví pak rekordně poklesla v roce 2013, kdy vrcholila úsporná opatření Nečasovy vlády.
 
