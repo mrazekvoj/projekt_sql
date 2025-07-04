@@ -71,9 +71,6 @@ ORDER BY e.country;
 
 -- Tabulka 1: Meziroční změna, bez agregace. 
 
-SELECT *
-FROM v_porovnani_mzdy_bez_agregace
-
 WITH prumerne_mzdy AS (
     SELECT 
         cpib.name AS odvetvi,
