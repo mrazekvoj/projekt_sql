@@ -6,7 +6,9 @@ FROM czechia_payroll
 WHERE value_type_code = 5958
     AND value IS NOT NULL
 GROUP BY payroll_year;
+
 ---
+
 CREATE VIEW v_prumerne_ceny_potravin AS
 SELECT 
     cpc.name AS kategorie,
@@ -17,7 +19,9 @@ JOIN czechia_price_category cpc
 	ON cp.category_code = cpc.code
 WHERE cp.value IS NOT NULL
 GROUP BY cpc.name, EXTRACT(YEAR FROM cp.date_to);
+
 ---
+
 CREATE VIEW v_mezirocni_zmena_mzdy_celkem AS
 SELECT 
     rok,
@@ -29,7 +33,9 @@ SELECT
         )::numeric, 2
     ) AS mezirocni_zmena_mzdy_procenta
 FROM v_prumerne_mzdy_celkem;
+
 ---
+
 CREATE VIEW v_mezirocni_zmeny_ceny_potravin AS
 WITH
 ceny AS (
@@ -49,7 +55,9 @@ ceny AS (
             2
         ) AS mezirocni_zmena_cen_procenta
     FROM ceny;
+
 ---
+
 CREATE VIEW v_mezirocni_zmeny_HDP AS
 WITH hdp AS (
     SELECT 
@@ -68,7 +76,9 @@ WITH hdp AS (
             2
         ) AS mezirocni_zmena_hdp_procenta
     FROM hdp;
+
 ---
+
 CREATE VIEW v_prumerne_mzdy_odvetvi AS
 SELECT 
     cpib.name AS odvetvi,
