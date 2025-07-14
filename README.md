@@ -35,7 +35,7 @@ Každá z otázek je zodpovězena v odděleném SQL skriptu:
 
 3. [📉 Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?](./otazka_3.sql)
 
- Nejpomaleji zdražoval cukr krystalový – jeho cena v porovnávaných letech průměrně meziročně klesala o dvě procenta. Podobně průměrně meziročně klesala i cena rajčat (–0,83 %).
+ Nejpomaleji zdražoval cukr krystalový – jeho cena v porovnávaných letech průměrně meziročně klesala o dvě procenta. Podobně průměrně meziročně klesala i cena rajčat (-0,83 %).
 
 4. [💰 Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?](./otazka_4.sql)
 
