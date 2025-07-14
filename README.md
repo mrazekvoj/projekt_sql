@@ -39,7 +39,7 @@ Každá z otázek je zodpovězena v odděleném SQL skriptu:
 
 4. [💰 Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?](./otazka_4.sql)
 
- Podle dat neexistuje. Nejvyšší rozdíl byl v roce 2013, a to 7,15 %.
+ **Neexistuje**. Nejvyšší rozdíl byl v roce 2013, a to 7,15 %.
 
 5. [🌍 Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?](./otazka_5.sql) 
 
