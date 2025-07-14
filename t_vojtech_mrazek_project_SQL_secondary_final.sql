@@ -1,4 +1,4 @@
---- Tabulka s HDP, GINI koeficientem a populací dalších evropských států ve stejném období, jako primární přehled pro ČR.
+--- Tabulka s HDP, GINI koeficientem a populací dalších evropských států ve stejném období jako primární přehled pro ČR.
 
 CREATE TABLE t_vojtech_mrazek_project_SQL_secondary_final AS
 SELECT 
