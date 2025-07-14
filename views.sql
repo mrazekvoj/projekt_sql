@@ -48,8 +48,7 @@ ceny AS (
             / NULLIF(LAG(prumerna_cena) OVER (ORDER BY rok), 0),
             2
         ) AS mezirocni_zmena_cen_procenta
-    FROM ceny
- ;
+    FROM ceny;
 ---
 CREATE VIEW v_mezirocni_zmeny_HDP AS
 WITH hdp AS (
@@ -68,5 +67,16 @@ WITH hdp AS (
             / NULLIF(predchozi_hdp_per_capita::numeric, 0),
             2
         ) AS mezirocni_zmena_hdp_procenta
-    FROM hdp
-;
+    FROM hdp;
+---
+CREATE VIEW v_prumerne_mzdy_odvetvi AS
+SELECT 
+    cpib.name AS odvetvi,
+    cp.payroll_year AS rok,
+    ROUND(AVG(cp.value)) AS prumerna_mzda
+FROM czechia_payroll cp 
+JOIN czechia_payroll_industry_branch cpib
+    ON cp.industry_branch_code = cpib.code
+WHERE cp.value_type_code = 5958
+    AND cp.value IS NOT NULL
+GROUP BY cpib.name, cp.payroll_year;
